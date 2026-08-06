@@ -19,12 +19,11 @@ Verify:
 curl -sI https://alexchim1231.github.io/privacy/ | head -1
 # expect: HTTP/2 200
 
+curl -s https://alexchim1231.github.io/robots.txt
+# expect: User-agent: * with Allow: /
+
 curl -s https://alexchim1231.github.io/app-ads.txt
 # expect: google.com, pub-… line
-
-curl -s https://alexchim1231.github.io/robots.txt
-# expect: User-agent: Google-adstxt
 ```
 
-`app.json` → `extra.privacyPolicyUrl` must match the live URL (no trailing path beyond `/privacy`).  
-Root also hosts `app-ads.txt` + `robots.txt` (AdMob crawler allow) for Marketing URL `https://alexchim1231.github.io/`.
+`app.json` → `extra.privacyPolicyUrl` must match the live URL (no trailing path beyond `/privacy`).

@@ -1,13 +1,2 @@
-# Allow AdMob / Google app-ads.txt crawlers
-# https://support.google.com/admob/answer/9679128
-User-agent: Google-adstxt
-Disallow:
-
-User-agent: Mediapartners-Google
-Disallow:
-
-User-agent: Googlebot
-Disallow:
-
 User-agent: *
-Disallow:
+Allow: /
